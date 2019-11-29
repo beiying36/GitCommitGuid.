@@ -80,10 +80,48 @@ resolves #55
 
 ## 利用工具规范，检查提交格式
 
+安装 husky 和 commitlint 依赖
+
 ```
 npm install husky --save-dev
-npm install lint-satged --save-dev
-npm install commitlint --save-dev
+npm install --save-dev @commitlint/config-conventional @commitlint/cli
+```
+
+新建并配置 commitlint.config.js 文件
+
+```
+module.exports = {
+    extends: ['@commitlint/config-conventional']
+};
+```
+
+配置 package.json 文件, 添加 husky 字段
+
+```
+"husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  },
+```
+
+## 配置 git commit 的提升工具
+
+安装 commitizen 和 cz-conventional-changelog
+
+```
+npm install --save-dev commitizen
+npm install --save-dev cz-conventional-changelog
+```
+
+配置 package.json 文件, 添加如下配置
+
+```
+"config": {
+    "commitizen": {
+        "path": "cz-conventional-changelog"
+    }
+}
 ```
 
 ## 根据commit消息生成changelog
