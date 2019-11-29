@@ -124,7 +124,7 @@ npm install --save-dev cz-conventional-changelog
 }
 # 在 script 中添加，使用`npm run commit`命令代替`git commit` 可以提示作用
 "scripts": {
-    "commit": "git-cz",
+    "commit": "git-cz"
 },
 ```
 
