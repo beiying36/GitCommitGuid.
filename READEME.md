@@ -128,4 +128,31 @@ npm install --save-dev cz-conventional-changelog
 },
 ```
 
+提示的详细说明
+
+```
+```
+
 ## 根据commit消息生成changelog
+
+conventional-changelog 安装
+
+```
+npm install -save-dev conventional-changelog-cli
+```
+
+配置 package.json 文件, 添加如下配置, `npm run changelog` 生成 CHANGELOG.md
+
+```
+"scripts": {
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+},
+```
+
+```
+# 不会覆盖以前的 Change log，只会在 CHANGELOG.md 的头部加上自从上次发布以来的变动
+$ conventional-changelog -p angular -i CHANGELOG.md -s 
+
+# 生成所有发布的 Change log
+$ conventional-changelog -p angular -i CHANGELOG.md -s -r 0
+```
