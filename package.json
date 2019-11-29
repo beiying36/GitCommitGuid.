@@ -1,6 +1,6 @@
 {
     "name": "commit-guide",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A Git Commit Message Guide",
     "author": "beiying36",
     "private": true,
