@@ -12,7 +12,7 @@
 <footer>
 ```
 
-其中，Header 是必需的，Body 和 Footer 可以省略。需要编写多行提交 message 时使用` git commit ` 代替 ` git commit -m "message" `。可以为 git 设置 commit 模板，时刻提醒自己.
+其中，Header 是必需的，Body 和 Footer 可以省略。需要编写多行提交 message 时使用`git commit` 代替 `git commit -m "message"`。可以为 git 设置 commit 模板，时刻提醒自己.
 
 每次一个小的改动就是一个 commit ,不要一大堆改动一个 commit ,不然 review 的时候痛苦到死.
 这样 review 起来方便 log 写起也简单.
@@ -40,7 +40,7 @@ git config commit.template .gitmessage.txt // 当前项目
 
 Header 部分只有一行，包括三个字段：type（必需）、scope（可选）和 subject（必需）。
 
-type: 用于说明 commit 的类别，只允许使用下面7个标识。如果 type 为 feat 和 fix，则该 commit 将肯定出现在 Change log 之中。
+type: 用于说明 commit 的类别，只允许使用下面 7 个标识。如果 type 为 feat 和 fix，则该 commit 将肯定出现在 Change log 之中。
 
 ```
 feat 新功能（feature）
@@ -57,7 +57,7 @@ perf 提高性能
 
 scope: 用于说明 commit 影响的范围，如数据层(model)，视图层(view)，控制层（controller）等。
 
-subject: 是 commit 目的的简短描述，以动词开头,不超过50个字符。使用第一人称现在时，比如 change，而不是 changed 或 changes ,第一个字母大写,结尾不加句号
+subject: 是 commit 目的的简短描述，以动词开头,不超过 50 个字符。使用第一人称现在时，比如 change，而不是 changed 或 changes ,第一个字母大写,结尾不加句号
 
 ## Body
 
@@ -66,7 +66,6 @@ Body 部分是对本次 commit 的详细描述，可以分成多行。
 ## Footer
 
 Footer 部分只用于不兼容变动和关闭 Issue。
-
 
 ## Example
 
@@ -131,9 +130,10 @@ npm install --save-dev cz-conventional-changelog
 提示的详细说明
 
 ```
+
 ```
 
-## 根据commit消息生成changelog
+## 根据 commit 消息生成 changelog
 
 conventional-changelog 安装
 
@@ -151,7 +151,7 @@ npm install -save-dev conventional-changelog-cli
 
 ```
 # 不会覆盖以前的 Change log，只会在 CHANGELOG.md 的头部加上自从上次发布以来的变动
-$ conventional-changelog -p angular -i CHANGELOG.md -s 
+$ conventional-changelog -p angular -i CHANGELOG.md -s
 
 # 生成所有发布的 Change log
 $ conventional-changelog -p angular -i CHANGELOG.md -s -r 0
